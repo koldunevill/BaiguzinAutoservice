@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BaiguzinAutoservice"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ServicePage">
+      Title="ServicePage" FontFamily="Tw Cen Mt" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -37,9 +37,9 @@
             <RadioButton Content="По убыванию стоимости" GroupName="Sort" Width="300" FontSize="20" Name="RButtonDown"
                          Checked="RButtonDown_Checked" />
         </StackPanel>
-        
+
         <Button Content="Добавить" Name="AddButton" Click="AddButton_Click"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
         
         <ListView Grid.Row="2" Name="ServiceListView">
         
@@ -75,7 +75,7 @@
                         <TextBlock Text="{Binding Discount, StringFormat=*скидка {0} % }" Opacity="{Binding Discount}"
                                    Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16" />
                         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                            <Button Name="EditButton" Content="Редактировать" Margin="2" />
+                            <Button Name="EditButton" Click="EditButon_Click" Content="Редактировать" Margin="2" />
                             <Button Name="DeleteButton" Content="Удалить" Margin="2" />
                         </StackPanel>
                     </Grid>
