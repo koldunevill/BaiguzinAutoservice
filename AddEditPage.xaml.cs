@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BaiguzinAutoservice
 {
@@ -43,8 +45,12 @@ namespace BaiguzinAutoservice
             if (_currentService.Cost == 0)
                 errors.AppendLine("Укажите стоимсоть услуги");
 
-            if (_currentService.Discount == -1)
+            if (_currentService.Discount < 0 && _currentService.Discount > 100)
                 errors.AppendLine("Укажите свою скидку");
+            if (string.IsNullOrWhiteSpace(_currentService.Discount.ToString()))
+            {
+                _currentService.Discount = 0;
+            }
 
             if (string.IsNullOrWhiteSpace(_currentService.DurationInSeconds))
                 errors.AppendLine("Укажите длительность услуги");
