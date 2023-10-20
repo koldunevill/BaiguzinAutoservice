@@ -46,7 +46,7 @@ namespace BaiguzinAutoservice
                 errors.AppendLine("Укажите стоимсоть услуги");
 
             if (_currentService.Discount < 0 && _currentService.Discount > 100)
-                errors.AppendLine("Укажите свою скидку");
+                errors.AppendLine("Укажите корректную скидку скидку");
             if (string.IsNullOrWhiteSpace(_currentService.Discount.ToString()))
             {
                 _currentService.Discount = 0;
