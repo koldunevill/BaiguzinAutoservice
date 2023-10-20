@@ -102,7 +102,7 @@ namespace BaiguzinAutoservice
                         }
                         break;
                  }
-            }j
+            }
             if (ifUpdate)
             {
                 PageListBox.Items.Clear();
