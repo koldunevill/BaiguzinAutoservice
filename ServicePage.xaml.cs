@@ -25,6 +25,7 @@ namespace BaiguzinAutoservice
         int CountPage;
         int CurrentPage = 0;
 
+
         List<service_a_import> CurrentPageList = new List<service_a_import>();
         List<service_a_import> TableList;
 
@@ -247,6 +248,11 @@ namespace BaiguzinAutoservice
                 ServiceListView.ItemsSource = Baiguzin_autoserviceEntities.GetContext().service_a_import.ToList();
             }
             UpdateServices();
+        }
+
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new SignUpPage((sender as Button).DataContext as service_a_import));
         }
     }
 }

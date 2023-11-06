@@ -15,13 +15,7 @@ namespace BaiguzinAutoservice
     
     public partial class Baiguzin_autoserviceEntities : DbContext
     {
-        public Baiguzin_autoserviceEntities()
-            : base("name=Baiguzin_autoserviceEntities")
-        {
-        }
-
         private static Baiguzin_autoserviceEntities _context;
-
         public static Baiguzin_autoserviceEntities GetContext()
         {
             if (_context == null)
@@ -29,6 +23,11 @@ namespace BaiguzinAutoservice
             return _context;
         }
 
+        public Baiguzin_autoserviceEntities()
+            : base("name=Baiguzin_autoserviceEntities")
+        {
+        }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -44,6 +43,7 @@ namespace BaiguzinAutoservice
         public virtual DbSet<ProductSale> ProductSale { get; set; }
         public virtual DbSet<service_a_import> service_a_import { get; set; }
         public virtual DbSet<ServicePhoto> ServicePhoto { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
     }
 }

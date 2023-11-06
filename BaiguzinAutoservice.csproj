@@ -68,57 +68,63 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BaiguzinModel.Context.cs">
+    <Compile Include="Baiguzin_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaiguzinModel.Context.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="BaiguzinModel.cs">
+    <Compile Include="Baiguzin_Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="BaiguzinModel.Designer.cs">
+    <Compile Include="Baiguzin_Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BaiguzinModel.edmx</DependentUpon>
+      <DependentUpon>Baiguzin_Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DocumentByService.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Manufacturer.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPhoto.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductSale.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServicePhoto.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="service_a_import.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>BaiguzinModel.tt</DependentUpon>
+      <DependentUpon>Baiguzin_Model.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -137,6 +143,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,12 +169,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="BaiguzinModel.edmx">
+    <EntityDeploy Include="Baiguzin_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BaiguzinModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Baiguzin_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="BaiguzinModel.edmx.diagram">
-      <DependentUpon>BaiguzinModel.edmx</DependentUpon>
+    <None Include="Baiguzin_Model.edmx.diagram">
+      <DependentUpon>Baiguzin_Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -182,16 +192,6 @@
     <Resource Include="Resources\service_logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BaiguzinModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BaiguzinModel.Context.cs</LastGenOutput>
-      <DependentUpon>BaiguzinModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="BaiguzinModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BaiguzinModel.edmx</DependentUpon>
-      <LastGenOutput>BaiguzinModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Услуги автосервиса\diz.jpg" />
     <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
     <Resource Include="Услуги автосервиса\transmission.jpg" />
@@ -213,6 +213,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Baiguzin_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Baiguzin_Model.edmx</DependentUpon>
+      <LastGenOutput>Baiguzin_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Baiguzin_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Baiguzin_Model.edmx</DependentUpon>
+      <LastGenOutput>Baiguzin_Model.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
